@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Incrível</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9; /* Cor de fundo geral */
+            color: #333;
+            padding-top: 60px; /* Espaço para o header fixo */
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        #hero {
+            background: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            margin-top: 60px; /* Para compensar o header fixo */
+        }
+
+        #hero h2 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        #hero .info-box {
+            display: inline-block;
+            padding: 2rem;
+            background: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-top: 2rem;
+        }
+
+        #hero .btn-container {
+            margin-top: 2rem;
+        }
+
+        #hero .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        #hero .btn:hover {
+            background: #555;
+        }
+
+        section {
+            padding: 2rem 0;
+            background: #fff;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .workshop-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .workshop-item {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        form input, form textarea, form select {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            padding: 0.75rem;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #555;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Workshop Incrível</h1>
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#workshops">Workshops</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Bem-vindo ao nosso Workshop!</h2>
+            <p>Aprenda novas habilidades e melhore suas competências com nossos workshops especializados.</p>
+            <div class="info-box">
+                <p>Não perca a chance de se inscrever e transformar sua carreira com nossos eventos de alta qualidade.</p>
+            </div>
+            <div class="btn-container">
+                <a href="#workshops" class="btn">Veja Nossos Workshops</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma equipe dedicada a oferecer workshops de alta qualidade nas mais diversas áreas. Nossos eventos são conduzidos por especialistas reconhecidos e oferecem uma experiência prática e enriquecedora.</p>
+        </div>
+    </section>
+
+    <section id="workshops">
+        <div class="container">
+            <h2>Nossos Workshops</h2>
+            <div class="workshop-list">
+                <div class="workshop-item">
+                    <h3>Workshop de Desenvolvimento Web</h3>
+                    <p>Aprenda a criar sites e aplicativos web com as tecnologias mais recentes.</p>
+                </div>
+                <div class="workshop-item">
+                    <h3>Workshop de Design Gráfico</h3>
+                    <p>Descubra as melhores práticas e ferramentas para criar designs impressionantes.</p>
+                </div>
+                <div class="workshop-item">
+                    <h3>Workshop de Análise de Dados</h3>
+                    <p>Entenda como coletar, analisar e interpretar dados para tomar decisões informadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Se você tiver alguma dúvida ou quiser saber mais sobre nossos workshops, entre em contato conosco!</p>
+            <form action="send_email.py" method="POST">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Workshop Incrível. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
